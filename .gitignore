@@ -1,0 +1,19 @@
+# ===== 仓库边界：根目录下只跟踪这三个目录 =====
+/*
+!/PRD/
+!/Frontend/
+!/Backend/
+!.gitignore
+
+# ===== Frontend（Vue）=====
+Frontend/node_modules/
+Frontend/dist/
+
+# ===== Backend（Python / FastAPI）=====
+Backend/.venv/
+**/__pycache__/
+*.pyc
+
+# ===== MODFLOW 运行产物 =====
+# 后端跑模型时生成的工作目录（输入文件、.hds、.lst 等）不入库
+Backend/**/runs/
