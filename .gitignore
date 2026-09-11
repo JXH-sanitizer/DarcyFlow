@@ -17,3 +17,4 @@ Backend/.venv/
 # ===== MODFLOW 运行产物 =====
 # 后端跑模型时生成的工作目录（输入文件、.hds、.lst 等）不入库
 Backend/**/runs/
+Backend/scripts/

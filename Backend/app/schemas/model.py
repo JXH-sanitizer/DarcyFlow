@@ -17,8 +17,10 @@ class CHDHead(BaseModel):
 
 
 class ModelParams(BaseModel):
-    length: float = Field(gt=0)
-    width: float = Field(gt=0)
+    sim_name: str = Field(min_length=3, max_length=50, pattern=r"^[a-zA-Z0-9_-]+$")
+    modelname: str = Field(min_length=3, max_length=50, default="gwf")
+    delr: float = Field(gt=0)
+    delc: float = Field(gt=0)
     nrow: int = Field(ge=1, le=100)
     ncol: int = Field(ge=1, le=100)
     k: Annotated[float, Field(
